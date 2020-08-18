@@ -21,4 +21,4 @@ def cowsaid(request):
 
 def cowsay_history(request):
     cowsaid = models.Cowsays.objects.all().order_by('-id')[:10]
-    return render(request, "history.html", {"cowsays": cowsaid})
+    return render(request, "history.html", {"cowsays": cowsaid, "history": "Most recent Cowsays"})
